@@ -1,0 +1,142 @@
+body {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0 auto;
+    margin:0 auto;
+    background-color: #000000; 
+    background: radial-gradient(#b76cfd, #03ffe6, hsl(39, 100%, 50%));
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+}
+
+h1 i {
+    display: inline-block;
+    animation: rotate 20s linear infinite;
+}
+#worldClockApp {
+    text-align: justify;
+    
+}
+.clock {
+    margin: 30px;
+    padding: 30px;
+    background-color: #443e41;
+    display: inline-block;
+    border-radius: 0px;
+    display: flex;
+    box-shadow: 125 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.clock h2 {
+    margin: 0;
+    color: #e1e7f8; /* Ensure clock labels are visible */
+}
+
+.clock time {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* Ensure time is visible */
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f3e7e7;
+    color: #6e6e6e;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 2px solid #eee;
+    
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 22px;
+    line-height: 1.5;
+}
+.clock {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.clock:hover {
+    transform: scale(1.05);
+    background-color: #272626; /* Darken the background a bit on hover */
+}
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    animation: fadeInUp 1s ease-out;
+}
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+#rotatingText {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff; /* Adjust the color as needed */
+    padding: 10px;
+    margin-top: 0px; /* Adjust spacing as needed */
+    animation: rotateText 5s linear infinite;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#reversedText {
+    /* Flips the container and text direction */
+    direction: rtl;
+    unicode-bidi: bidi-override;
+
+    /* Optional: Flip back the container for correct flow, leaving the text reversed */
+    transform: scaleX(-1);
+}
+.city-name, .city-time {
+    margin-right: 20px;
+    margin-left: 20px; /* Adjust the value as needed */
+    display: inline-block;
+    font-size: 28px;
+    font-weight: normal;
+    color: #ffffff; /* Ensure time is visible */
+}
+
+/* If you want to remove the margin from the last element inside .clock */
+.clock div:last-child {
+    margin-bottom: 0 auto;
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffc3ad; /* Ensure time is visible */
+}
+#clocksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the clocks within the container */
+    gap: 0px; /* Adjusts the space between clocks */
+}
+
+.clock {
+    flex: 200px; /* Each clock can flexibly grow and shrink but starts with a base width of 200px */
+    /* Your existing .clock styles here */
+}
