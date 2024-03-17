@@ -69,11 +69,20 @@ const cities = [
     // Add more cities as needed
 ];
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+}
+
 function updateClocks() {
+    shuffleArray(cities); // Shuffle the cities array
     const clocksContainer = document.getElementById('clocksContainer');
     clocksContainer.innerHTML = ''; // Clear existing clocks
 
-    cities.forEach(city => {
+    // Change '4' to however many clocks you want to display
+    cities.slice(0, 20).forEach(city => {
         const time = new Date().toLocaleTimeString('en-US', { timeZone: city.timezone });
         const clockHTML = `
         <div class="clock">

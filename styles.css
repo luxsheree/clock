@@ -1,5 +1,5 @@
 body {
-    font-size: 24px;
+    font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ h1 i {
     animation: rotate 20s linear infinite;
 }
 #worldClockApp {
-    text-align: justify;
+    text-align: center
     
 }
 .clock {
@@ -88,8 +88,8 @@ footer {
     100% { background-position: 0% 50%; }
 }
 #rotatingText {
-    display: inline-block;
-    font-size: 20px;
+    display: inline-block; 
+    font-size: 100px;
     color: #fff; /* Adjust the color as needed */
     padding: 10px;
     margin-top: 0px; /* Adjust spacing as needed */
@@ -113,8 +113,8 @@ footer {
     transform: scaleX(-1);
 }
 .city-name, .city-time {
-    margin-right: 20px;
-    margin-left: 20px; /* Adjust the value as needed */
+    margin-right: 10px;
+    margin-left: 10px; /* Adjust the value as needed */
     display: inline-block;
     font-size: 28px;
     font-weight: normal;
@@ -133,10 +133,16 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centers the clocks within the container */
-    gap: 0px; /* Adjusts the space between clocks */
+    gap: 20px; /* Adjusts the space between clocks */
 }
 
 .clock {
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(3, 3, 3, 0.1);
+    text-align: center;
     flex: 200px; /* Each clock can flexibly grow and shrink but starts with a base width of 200px */
     /* Your existing .clock styles here */
 }
